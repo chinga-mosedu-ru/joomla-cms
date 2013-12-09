@@ -655,6 +655,7 @@ class JSession implements IteratorAggregate
 		register_shutdown_function('session_write_close');
 
 		session_cache_limiter('none');
+        session_save_path('/tmp');
 		session_start();
 
 		return true;
